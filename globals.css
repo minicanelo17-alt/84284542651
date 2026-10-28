@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #16295e;
+  --navy-deep: #0e1c46;
+  --sky-card: #bfe2f7;
+  --accent-pink: #ff5f6d;
+  --accent-orange: #ff9a3d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Nunito", "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: radial-gradient(1200px 800px at 20% -10%, #2b3f7a 0%, #141b3d 45%, #0b0f26 100%);
+  min-height: 100vh;
+}
+
+.font-display {
+  font-family: "Nunito", "Arial Black", "Segoe UI", system-ui, sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.card-sky {
+  background: linear-gradient(180deg, #cde9fb 0%, #b7ddf6 30%, #aed7f4 100%);
+}
+
+.badge-route {
+  background: linear-gradient(135deg, #ff5f7e 0%, #ff6b4a 55%, #ff9d2e 100%);
+  box-shadow: 0 12px 32px rgba(255, 95, 110, 0.45), inset 0 2px 0 rgba(255, 255, 255, 0.5);
+}
+
+.navy-panel {
+  background: linear-gradient(180deg, #1d3468 0%, #152655 100%);
+  box-shadow: 0 14px 34px rgba(10, 20, 60, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+@keyframes pulse-soft {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.55); }
+  50% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
+}
+.next-glow {
+  animation: pulse-soft 2s ease-in-out infinite;
+}
+
+@keyframes marquee-x {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee-x 22s linear infinite;
+}
+
+.schedule-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+.schedule-scroll::-webkit-scrollbar-thumb {
+  background: rgba(22, 41, 94, 0.3);
+  border-radius: 8px;
+}
+
+@media print {
+  body { background: #fff; }
+  .no-print { display: none !important; }
+}
